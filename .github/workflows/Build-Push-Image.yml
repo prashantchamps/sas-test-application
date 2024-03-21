@@ -16,6 +16,12 @@ jobs:
           registry: sasaksacrtest.azurecr.io
           username: ${{ secrets.AZURE_CLIENT_ID }}
           password: ${{ secrets.AZURE_CLIENT_SECRET }}
+      - name: Build and Push to ACR
+        uses: docker/build-push-action@v2
+        with:
+          push: true
+          tags: sasaksacrtest.azurecr.io/sas-test-app:latest # ${{ secrets.IMAGE_TAG }}
+          file: Dockerfile
 #jobs:
 #  build:
 #    runs-on: ubuntu-latest
