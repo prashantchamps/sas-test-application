@@ -17,5 +17,5 @@ jobs:
         uses: docker/build-push-action@v2
         with:
           push: true
-          tags: sasaksacrtest.azurecr.io/sas-test-app:1.1.5
+          tags: sasaksacrtest.azurecr.io/sas-test-app:1.1.6
           file: Dockerfile
